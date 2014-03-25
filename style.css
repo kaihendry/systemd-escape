@@ -1,4 +1,4 @@
-#implement { background-color: lightgreen; }
+#implement { background-color: lightgreen; padding: 1em; margin: 2em; border: thick solid green; }
 
 body {
 	font-family:sans-serif;
