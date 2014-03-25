@@ -1,0 +1,53 @@
+body {
+	font-family:sans-serif;
+	padding:90px 0 0;
+}
+
+.vertical-form {
+	width: 100%;
+	margin:0 auto;
+}
+
+.vertical-form legend {
+	width:100%;
+	font-size:24px;
+	font-weight:500;
+	text-align:center;
+	margin:0 0 30px;
+}
+
+.vertical-form input[type='text'],.vertical-form input[type='password'] {
+	border:1px #c1c1c1 solid;
+	color:#c1c1c1;
+	height:50px;
+	font-size:18px;
+}
+
+.vertical-form input[type='text'],.vertical-form input[type='password'],.vertical-form input[type='submit'] {
+	display:block;
+	width: 80%;
+	text-align:center;
+	border-radius:3px;
+	color:#2d2d2d;
+	outline:none;
+	font-family:inherit;
+	margin:0 auto 18px;
+}
+
+footer {
+	text-align:center;
+	margin-bottom:200px;
+}
+
+footer p:first-child {
+	color:#ccc;
+}
+
+footer a:first-child {
+	border-bottom:solid 1px #ccc;
+	text-decoration:none;
+}
+
+footer p:nth-child(2) a {
+	border-bottom:solid 1px #000;
+}
