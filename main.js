@@ -39,6 +39,8 @@ $(document).ready(function() {
 			textinput = '/' + textinput;
 		}
 
+		textinput = textinput.replace(/-/g, '/');
+
 		$("#path").val(textinput);
 	});
 
