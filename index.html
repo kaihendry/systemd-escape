@@ -9,8 +9,8 @@
 <body>
 <form class="vertical-form">
 <legend>Systemd escaper</legend>
-<input id="path" type=text />
-<input id="escaped" type=text />
+<input id="path" type=text placeholder="path" />
+<input id="escaped" type=text placeholder="escaped systemd device" />
 </form>
 
 <p><tt>/dev/input/by-id/usb-Chicony_Electronics_Co.__Ltd._Integrated_Camera-event-if00</tt> should be escaped as:<br> <tt>dev-input-by\x2did-usb\x2dChicony_Electronics_Co.__Ltd._Integrated_Camera\x2devent\x2dif00.device</tt></p>
@@ -18,8 +18,6 @@
 <p>Some unit names reflect paths existing in the file system namespace. Example: a device unit dev-sda.device refers to a device with the device node /dev/sda in the file system namespace. If this applies, a special way to escape the path name is used, so that the result is usable as part of a filename. Basically, given a path, "/" is replaced by "-", and all unprintable characters and the "-" are replaced by C-style "\x20" escapes. The root directory "/" is encoded as single dash, while otherwise the initial and ending "/" is removed from all paths during transformation. This escaping is reversible.</p>
 <p><a href=http://www.freedesktop.org/software/systemd/man/systemd.unit.html>http://www.freedesktop.org/software/systemd/man/systemd.unit.html</a></p>
 
-
-
-<footer>hendry@iki.fi</footer>
+<footer>hendry@iki.fi &amp; <a href="https://github.com/kaihendry/systemd-escape">Github</a></footer>
 </body>
 </html>
