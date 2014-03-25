@@ -4,42 +4,7 @@
 <title>systemd</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-<script>
-
-function ascii (a) { return a.charCodeAt(0); }
-
-$(document).ready(function(){
-
-$("#path").keyup(function(){
-	var textinput = $('#path').val();
-	if (textinput.substring(0, 1) == '/') {
-	  textinput = textinput.substring(1);
-	  }
-
-	if (textinput.slice(-1) == '/') {
-	  textinput = textinput.substring(0, textinput.length - 1);
-	  }
-
-	textinput = textinput.replace('/', '-');
-
-	$("#escaped").val(textinput);
-	});
-
-$("#escaped").keyup(function(){
-	var textinput = $('#escaped').val();
-	if (textinput.slice(-1) != '/') {
-		textinput += '/';
-	}
-	if (textinput.slice(0) != '/') {
-		textinput = '/' + textinput;
-	}
-
-	$("#path").val(textinput);
-	});
-
-});
-
-</script>
+<script src="main.js"></script>
 </head>
 <body>
 <form class="vertical-form">
@@ -47,6 +12,8 @@ $("#escaped").keyup(function(){
 <input id="path" type=text />
 <input id="escaped" type=text />
 </form>
+
+<p><tt>/dev/input/by-id/usb-Chicony_Electronics_Co.__Ltd._Integrated_Camera-event-if00</tt> should be escaped as:<br> <tt>dev-input-by\x2did-usb\x2dChicony_Electronics_Co.__Ltd._Integrated_Camera\x2devent\x2dif00.device</tt></p>
 <footer>hendry@iki.fi</footer>
 </body>
 </html>
